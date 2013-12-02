@@ -17,7 +17,6 @@ board.on('ready', function () {
     });
 
     _.each(_.keys(leds), function (pin) {
-        console.log(pin);
-        _.throttle(leds[pin])
+        leds[pin].blink();
     });
 });
